@@ -13,10 +13,19 @@
 		height: 120px;
 	}
 	&__btn {
+		width: 37px;
+		height: 29px;
 		background-color: transparent;
 		border: none;
 		padding: 0;
 		cursor: pointer;
+	}
+	&__btn-img {
+		width: 100%;
+		object-fit: cover;
+	}
+	&__btn-menu {
+		display: none;
 	}
 }
 .logo {
@@ -204,6 +213,7 @@
 		cursor: pointer;
 	}
 	&__content {
+		display: block;
 		max-width: 483px;
 		margin: 0 auto;
 		text-align: center;
@@ -239,7 +249,27 @@
 	&__images {
 		max-width: 483px;
 	}
+
+	&__content-menu {
+		display: none;
+		max-width: 320px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column
+	}
+	&__list-item {
+		margin: 10px 0;
+	}
+	&__list-link {
+		@extend %title-font;
+		color: rgba(54, 56, 56, 0.9);
+		line-height: 22px;
+	}
 }
+
 //* breadcrumbs
 .breadcrumbs {
 	background: rgba($color: #dfdfdf, $alpha: 0.5);
@@ -248,11 +278,15 @@
 	z-index: 10;
 	&__list {
 		display: flex;
+		overflow-x: auto;
+	}
+	&__item {
+		position: relative;
+		padding-right: 8px;
 	}
 	&__item:after {
 		content: "/";
-		margin-left: -4px;
-		margin-right: 4px;
+		position: absolute;
 	}
 	&__item:last-child:after {
 		display: none;
@@ -1256,3 +1290,6 @@
 		margin-right: 11px;
 	}
 }
+
+
+@import "media";
