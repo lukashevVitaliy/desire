@@ -376,6 +376,16 @@
 			grid-column: span 1;
 			grid-row: span 2;
 		}
+		&.gallery-page {
+			.gallery__item:nth-child(8) {
+				grid-column: span 1;
+				grid-row: span 1;
+			}
+			.gallery__item:nth-child(9) {
+				grid-column: span 1;
+				grid-row: span 2;
+			}
+		}	
 	}
 	//* main block-box
 	.blog-box {
