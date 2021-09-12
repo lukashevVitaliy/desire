@@ -11,7 +11,7 @@ $(function () {
 		dots: true,
 		arrows: false,
 		fade: true,
-		autoplay: true
+		autoplay: true,
 	});
 
 	$('.article-slider__box').slick({
@@ -32,5 +32,11 @@ $(function () {
 			filter: '.living'
 		}
 	});
+
+	if($(window).width() < 670) {
+		$('.works-path__item--measuring').appendTo($('.works-path__items-box'));
+	}
+
+
 });
 
