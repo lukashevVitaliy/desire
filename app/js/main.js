@@ -68,7 +68,6 @@ $(function () {
 					slidesToScroll: 1
 				}
 			},
-			
 		]
 	});
 
