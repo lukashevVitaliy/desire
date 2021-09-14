@@ -24,7 +24,52 @@ $(function () {
 		slidesToScroll: 10,
 		dots: true,
 		arrows: false,
-		autoplay: true
+		autoplay: true,
+		responsive: [
+			{
+				breakpoint: 1701,
+				settings: {
+					slidesToShow: 8,
+					slidesToScroll: 8
+				}
+			},
+			{
+				breakpoint: 1401,
+				settings: {
+					slidesToShow: 6,
+					slidesToScroll: 6
+				}
+			},
+			{
+				breakpoint: 1051,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4
+				}
+			},
+			{
+				breakpoint: 721,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 671,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 361,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			},
+			
+		]
 	});
 
 	let mixer = mixitup('.gallery__inner', {
@@ -33,7 +78,7 @@ $(function () {
 		}
 	});
 
-	if($(window).width() < 670) {
+	if ($(window).width() < 670) {
 		$('.works-path__item--measuring').appendTo($('.works-path__items-box'));
 	}
 
